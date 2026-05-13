@@ -1,0 +1,38 @@
+---
+title: "Ansys"
+cluster:
+  - 2e
+
+form:
+  - auto_modules_ansys
+  - ansys_exec
+  - global_use_vglrun
+  - auto_accounts
+  - auto_queues
+  - global_bc_num_hours
+  - global_cores
+  - global_memory
+  - global_advanced
+  - global_sbatch_options
+  - bc_vnc_idle
+  - bc_vnc_resolution
+  - bc_email_on_started
+
+attributes:
+  bc_vnc_idle: 0
+  ansys_exec:
+    widget: select
+    label: "Ansys executable"
+    help: "Verify availability on system prior to starting job - varies by version"
+    options:
+      - [ "Workbench", "runwb2" ]
+      - [ "Electronics Desktop", "ansysedt" ]
+      - [ "Fluent", "fluent" ]
+      - [ "CFX-Pre", "cfx5pre" ]
+      - [ "CFX-Solver Manager", "cfx5solve" ]
+      - [ "MAPDL Launcher", "launcher" ]
+      - [ "Icepak", "icepak" ]
+      - [ "ICEM CFD", "icemcfd" ]
+      - [ "Polyflow", "polyflow" ]
+      - [ "Chemkin", "chemkin" ]
+      - [ "SIwave", "siwave" ]
